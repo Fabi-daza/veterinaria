@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="ISO 8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinaria</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Veterinaria Fabian Daza</h1>
+    <table class="principal">
+        <tr>
+            <td>
+                <table id="form" class="form">
+                    <tr>
+                        <td colspan="2">
+                            <h3>Reserva tu hora</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Nombre y Apellido</label>
+                            <input type="text" name="nombreapellido" id="nombreapellido" data-validacion="nombreapellido">
+                        </td>
+                        <td>
+                            <label>Nombre Mascota</label>
+                            <input type="text" name="nombremascota" id="nombremascota" data-validacion="nombremascota">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>RUT</label>
+                            <input type="text" name="rut" id="rut" data-validacion="rut">
+                        </td>
+                        <td>
+                            <label>Email</label>
+                            <input type="email" name="email" id="email" data-validacion="email" >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Fecha de consulta</label>
+                            <input type="date" name="fecha" id="fecha" data-validacion="fecha">
+                        </td>
+                        <td>
+                            <label>Horario</label>
+                            <select name="horario" id="horario" data-validacion="horario">
+                                <option value="1">1</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Ciudad</label>
+                            <select name="ciudad" id="ciudad" data-validacion="ciudad">
+                                <option value=""> --Selecione una ciudad--</option>
+                                <option value="1">Santiago</option>
+                                <option value="2">Valparaiso</option>
+                            </select>
+                        </td>
+                        <td>
+                            <label>Comuna</label>
+                            <select name="comuna" id="comuna" data-validacion="comuna" disabled>
+                                <option value=""> -- Seleccione una comuna --</option>
+                                <option value="1">Maipu</option>
+                                <option value="2">Valparaiso</option>
+                                
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span>Como se entero de nosotros</span></td>
+                        <td>
+                            <label ><input type="checkbox" name="checkbox" data-validacion="checkbox" id="checkbox1">Web</label>
+                            <label ><input type="checkbox" name="checkbox" data-validacion="checkbox" id="checkbox2">TV</label>
+                            <label ><input type="checkbox" name="checkbox" data-validacion="checkbox" id="checkbox3">Amigos</label>
+                            
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="checkbox" data-validacion="recordar" name="" id="">
+                            <span>Le gustaria que le recordemos su hora, un dia antes?</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-center" colspan="2"><button onclick="validarFormulario()">Reservar</button></td>
+                    </tr>
+                </table>
+            </td>
+            <td class="td-top">
+                <table class="horarios">
+                    <tr>
+                        <th colspan="3">
+                        Horarios de Alta Demanda
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>Horario</th>
+                        <th>Cantidad</th>
+                        <th>Porcentaje</th>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <table class="reservas">
+                <tr>
+                    <th colspan="5">Listado de Reservas</th>
+                </tr>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Nombre Mascota</th>
+                    <th>Recordar</th>
+                    <th>Hora Agendada</th>
+                    <th>Acciones</th>
+                </tr>
+                <tr>
+                        <td>Fabian Daza</td>
+                        <td>Klara</td>
+                        <td>Si</td>
+                        <td>01/02/2021 8:00 a 9:00</td>
+                        <td>
+                            <button class="btn-borrar">Borrar</button>
+                            <button class="btn-recordar">Recordar</button>
+                        </td>
+                </tr>
+            </table>
+        </tr>
+    </table>
+
+    <script src="./js/utils.js"></script>
+    <script src="./js/controlador.js"></script>
+</body>
+</html>
